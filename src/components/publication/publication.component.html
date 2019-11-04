@@ -1,0 +1,51 @@
+
+<!-- Publication -->
+<div #publicationWrapper class="wrapper__publication" *ngIf="publication">
+    <!-- Body publication -->
+    <div class="publication__body">
+        <!-- Icon user publication -->
+        <figure class="publication__body--picture">
+            <img src="assets/svg/icon-user.svg" alt="">
+        </figure>
+        <!-- Content publication -->
+        <div class="publication__body--content">
+            <div class="publication--name text-primary">
+                <label>{{publication.userName}}</label>
+            </div>
+            <div class="publication--date">
+                <label>{{publication.date}}</label>
+            </div>
+            <p class="publication--content">
+                {{publication.publication}}
+            </p>
+            <!-- This element is hidden in mobile devices -->
+            <div class="publication--options">
+                <a class="text-primary" (click)="addReaction()">Reaccionar</a>
+                <a class="text-primary" (click)="focusComment()">Comentar</a>
+            </div>
+        </div>
+    </div>
+    <!-- Publication reactios -->
+    <div class="publication__reactions">
+        <ul class="reactions--picture" *ngIf="publication.reactions">
+            <li *ngFor="let reaction of publication.reactions | slice:0:3; let i = index;" [ngStyle]="{'background-color': reaction.backgroundColor}"></li>
+        </ul>
+        <!-- Reactions size -->
+        <label class="reactions--size text-primary" *ngIf="publication.reactions">{{publication.reactions.length}}</label>
+        <!-- Comments size -->
+        <label class="comments--size" *ngIf="publication.comments">{{publication.comments.length}} comentarios</label>
+    </div>
+    <!-- This element is displayed in mobile devices -->
+    <div class="publication--options--mobile">
+      <a class="text-primary" (click)="addReaction()">Reaccionar</a>
+      <a class="text-primary">Comentar</a>
+    </div>
+    <!-- List comments publications -->
+    <div class="publication__comments" *ngIf="publication.comments">
+        <list-comments-root [publication]="publication"></list-comments-root>
+    </div>
+    <!-- Input create comment -->
+    <div class="publication__comment--new">
+        <create-comment-root [publication]="publication" [indexPublication]="indexPublication"></create-comment-root>
+    </div>
+</div>

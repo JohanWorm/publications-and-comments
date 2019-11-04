@@ -1,0 +1,6 @@
+<!-- Create comment -->
+<div class="wrapper__create__component">
+  <form [formGroup]="commentForm" (ngSubmit)="createComment()">
+    <input type="text" formControlName="comment" placeholder="Escribe un comentario" />
+  </form>
+</div>

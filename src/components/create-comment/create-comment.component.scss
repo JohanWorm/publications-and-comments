@@ -1,0 +1,12 @@
+@import "./../../styles.enviroments.scss";
+
+.wrapper__create__component {
+  padding: 20px;
+
+  input {
+    border: 1px solid $border-color;
+    padding: 10px;
+    width: calc(100% - 23px);
+  }
+  
+}

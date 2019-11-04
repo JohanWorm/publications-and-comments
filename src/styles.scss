@@ -1,0 +1,50 @@
+@import "./styles.enviroments.scss";
+
+html {
+  font-size: 12px;
+  min-height: 100%;
+  height: 100%;
+  background-color: $background-color;
+}
+
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  height: 28px;
+  background-color: #FFF;
+  padding: 0px 30px;
+  border-radius: 3px;
+
+  &.btn-primary {
+    background-color: $primary-color;
+    color: #FFF;
+  }
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+
+textarea,
+input {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  padding: 24px 20px 2px 20px;
+  font-family: Arial;
+}

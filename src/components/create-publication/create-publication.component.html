@@ -1,0 +1,11 @@
+<!-- Create publication -->
+<div class="create-publication-container">
+  <form [formGroup]="publicationForm">
+    <div class="text-container">
+      <textarea formControlName="publication" placeholder="Escribe aquí tu texto"></textarea>
+    </div>
+    <div class="button-container">
+      <button type="button" [disabled]="publicationForm.invalid" class="btn-primary" (click)="createPublication()">Publicar</button>
+    </div>
+  </form>
+</div>

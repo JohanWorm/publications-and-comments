@@ -1,0 +1,21 @@
+<!-- Comment -->
+<div class="wrapper__comment" *ngIf="comment">
+  <!-- Icon user comment -->
+  <figure class="comment__body--picture">
+    <img src="assets/svg/icon-user.svg">
+  </figure>
+  <!-- Content comment -->
+  <div class="comment__body--content">
+    <div class="main__content">
+      <p>
+        <span class="comment--name text-primary">{{comment.userName}}</span>
+        <span class="comment--content">
+          {{comment.comment}}
+        </span>
+      </p>
+    </div>
+    <div class="comment--date">
+      <label>{{comment.date}}</label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+@import "./../../styles.enviroments.scss";
+
+.create-publication-container {
+  border: 1px solid $border-color;
+  background-color: #FFFFFF;
+
+  .text-container {
+    
+    textarea {
+      width: calc(100% - 40px);
+      color: $primary-color;
+
+      &::placeholder {
+        color: $primary-color !important;
+      }
+
+    }
+
+  }
+
+  .button-container {
+    text-align: right;
+    padding: 4px;
+    border-top: 1px solid $border-color;
+  }
+
+}

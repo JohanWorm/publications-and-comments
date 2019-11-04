@@ -1,0 +1,44 @@
+@import "./../../styles.enviroments.scss";
+
+#wrapperHome {
+  font-family: Arial;
+  height: 100%;
+
+  .header {
+    height: 40px;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+    background-color: #FFFFFF;
+
+    .title-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .title {
+        font-weight: bold;
+      }
+
+    }
+
+    .title-user {
+      position: absolute;
+      top: 14px;
+      right: 15px;
+      color: #a0a0a0;
+    }
+
+  }
+
+  .body {
+    height: calc(100% - 81px);
+    padding: 20px 15%;
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      padding: 20px 5%;
+    }
+    
+  }
+
+}
