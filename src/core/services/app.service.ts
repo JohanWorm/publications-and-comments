@@ -3,12 +3,6 @@ import { Publication } from './../models/publication';
 import { Comment } from './../models/comment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-export interface Characters {
-    id: Number;
-    name: String;
-    age: Number;
-}
-
 @Injectable({
     providedIn: 'root'
 })
